@@ -7,14 +7,14 @@ $$
 
 where l is the length of the string in meters, g is the acceleration due to gravity in $m/s^2$
 ## The Algorithm:
-1- start with defining a function to calculate the periodic time ```python calculate_periodic_timr(l) ```python  with agrument l and g where g is constant of 9.81 m/s^2.
-2- use lambda function to calculate the periodic time ```python lambda l: 2* math.pi/ math.sqrt(g / l) ```python. 
-3- use a list of length values ```python x = [0.5, 1, 1.5, 2, 2.5] ```python  and use map function to allow calculation of time using each element of the list ```python  periodic_times = map(calculate_periodic_time(l), x) ```python
+1- start with defining a function to calculate the periodic time ``` calculate_periodic_timr(l) ```  with agrument l and g where g is constant of 9.81 m/s^2.
+2- use lambda function to calculate the periodic time ``` lambda l: 2* math.pi/ math.sqrt(g / l) ```. 
+3- use a list of length values ``` x = [0.5, 1, 1.5, 2, 2.5] ```  and use map function to allow calculation of time using each element of the list ```  periodic_times = map(calculate_periodic_time(l), x) ```.
 
-4- create a list of periodic times using the periodic_times map elements ```python  T=[periodic_time for periodic_time in periodic_times] 
+4- create a list of periodic times using the periodic_times map elements ```  T=[periodic_time for periodic_time in periodic_times] ```
 
 5- print results as to print the periodic time of the element of index 0 in the list of length and its corresponding value in the time list and repeat the same for each index in the list. 
-**for example:** the periodic time for the element of index zero in x is the element of index zero in T in "seconds" ```python  print("periodic time for l= ", x[0] , "m is ", T[0],"seconds") ```python
+**for example:** the periodic time for the element of index zero in x is the element of index zero in T in "seconds" ``` print("periodic time for l= ", x[0] , "m is ", T[0],"seconds") ```
 
 ```python 
 
