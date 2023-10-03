@@ -5,7 +5,7 @@ $$
 T=2*\pi * \sqrt(l/g)
 $$
 
-where l is the length of the string in meters, g is the acceleration due to gravity in $$ m/s^2 $$
+where l is the length of the string in meters, g is the acceleration due to gravity in $m/s^2$
 ## The Algorithm:
 1- start with defining a function to calculate the periodic time ```python calculate_periodic_timr(l) ```python  with agrument l and g where g is constant of 9.81 m/s^2.
 2- use lambda function to calculate the periodic time ```python lambda l: 2* math.pi/ math.sqrt(g / l) ```python. 
