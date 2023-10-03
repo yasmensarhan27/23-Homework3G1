@@ -20,7 +20,7 @@ where l is the length of the string in meters, g is the acceleration due to grav
 
 # This is Python code
 
-```python
+```
 
 import math
 def calculate_periodic_time(l):
