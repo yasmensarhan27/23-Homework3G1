@@ -16,13 +16,12 @@ where l is the length of the string in meters, g is the acceleration due to grav
 5- print results as to print the periodic time of the element of index 0 in the list of length and its corresponding value in the time list and repeat the same for each index in the list. 
 **for example:** the periodic time for the element of index zero in x is the element of index zero in T in "seconds" ``` print("periodic time for l= ", x[0] , "m is ", T[0],"seconds") ```
 
-```python 
-
 ## python code:
 
 # This is Python code
+
 ```python
-{python}
+
 import math
 def calculate_periodic_time(l):
   """Calculates the angular frequency of a simple pendulum.
@@ -51,3 +50,4 @@ T=[periodic_time for periodic_time in periodic_times]
 
 # Print the periodic times
 print("periodic time for l= ", x[0] , "m is ", T[0],"seconds", "\n", "periodic time for l= ", x[1] , "m is ", T[1],"seconds","\n", "periodic time for l= ", x[2] , "m is ", T[2], "seconds", "\n", "periodic time for l= ", x[3] , "m is ", T[3],"seconds","\n", "periodic time for l= ", x[4] , "m is ", T[4],"seconds",)
+```
