@@ -34,7 +34,7 @@ class TestCalculatePeriodicTime(unittest.TestCase):
         # Perform the tests
         for length, expected_periodic_time in test_cases:
             result = calculate_periodic_time(length)
-            self.assertAlmostEqual(result, expected_periodic_time, delta=0.001)
+            assert math.isclose(result, expected_periodic_time, rel_tol=0.001)
 
 if __name__ == '__main__':
     unittest.main()
