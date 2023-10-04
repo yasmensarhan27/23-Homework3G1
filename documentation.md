@@ -6,11 +6,18 @@ L is the length of the string and g is acceleration due to gravity
 # Objectives
 1 To use a classical mechanics function as a python function and using this function as an argument in another function.
 # Steps to implement
-1 Define a classical mechanics function as periodic time with arguments l and g.
-2.Use Lambda function is used to calculate the periodic time.
-3. List the length values.
-4. Use map function to calculate time using each element in the lists.
-5. Create a list of periodic times using the map elements.
-6. Print results which takes the periodic time of index 0 in the length list and give its 
- corresponding value in the time lists.
-7. The process is repeated  
+- Define a classical mechanics function as periodic time with arguments l and g.
+- Use Lambda function is used to calculate the periodic time.
+- List the length values.
+- Use map function to calculate time using each element in the lists.
+- Create a list of periodic times using the map elements.
+- Print results which takes the periodic time of index 0 in the length list and give its 
+   corresponding value in the time lists.
+- The process is repeated
+  # Functions used
+- Lambda Function : Lambda function is used as a substitute for fully fledge name function to use it as a simple operation. They have limitations in comparision to function defined by 'def'. They are mostly used for simple one linear operations and are not preferred for multisteps complex operations
+- Map function: Map function is used to apply a specificed function to each item in an iterable and return a new iterable containing the results.
+  
+
+  
+
