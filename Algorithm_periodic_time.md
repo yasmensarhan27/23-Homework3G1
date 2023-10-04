@@ -43,11 +43,11 @@ def calculate_periodic_time(l):
 x = [0.5, 1, 1.5, 2, 2.5]
 
 # Use map to apply the lambda function to each length in the list
-periodic_times = map(calculate_periodic_time, x)
+periodic_times = map(calculate_periodic_time(x), x)
 
 # create a list of periodic times using the map values:
 T=[periodic_time for periodic_time in periodic_times]
 
 # Print the periodic times
-print("periodic time for l= ", x[0] , "m is ", T[0],"seconds", "\n", "periodic time for l= ", x[1] , "m is ", T[1],"seconds","\n", "periodic time for l= ", x[2] , "m is ", T[2], "seconds", "\n", "periodic time for l= ", x[3] , "m is ", T[3],"seconds","\n", "periodic time for l= ", x[4] , "m is ", T[4],"seconds",)
+print("\n","periodic time for l= ", x[0] , "m is ", round(T[0],ndigits=2),"seconds", "\n", "periodic time for l= ", x[1] , "m is ", round(T[1],ndigits=2),"seconds","\n", "periodic time for l= ", x[2] , "m is ", round(T[2],ndigits=2), "seconds", "\n", "periodic time for l= ", x[3] , "m is ", round(T[3],ndigits=2),"seconds","\n", "periodic time for l= ", x[4] , "m is ", round(T[4],ndigits=2),"seconds",)
 ```
