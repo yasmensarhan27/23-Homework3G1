@@ -20,7 +20,7 @@ def calculate_periodic_time(l):
 x = [0.5, 1, 1.5, 2, 2.5]
 
 # Use map to apply the lambda function to each length in the list
-periodic_times = map(calculate_periodic_time(l), x)
+periodic_times = map(calculate_periodic_time, x)
 
 # Print the periodic times
 
