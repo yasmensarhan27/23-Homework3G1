@@ -9,7 +9,7 @@ where l is the length of the string in meters, g is the acceleration due to grav
 ## The Algorithm:
 1- start with defining a function to calculate the periodic time ``` calculate_periodic_timr(l) ```  with agrument l and g where g is constant of 9.81 m/s^2.
 2- use lambda function to calculate the periodic time ``` lambda l: 2* math.pi/ math.sqrt(g / l) ```. 
-3- use a list of length values ``` x = [0.5, 1, 1.5, 2, 2.5] ```  and use map function to allow calculation of time using each element of the list ```  periodic_times = map(calculate_periodic_time(l), x) ```.
+3- use a list of length values ``` x = [0.5, 1, 1.5, 2, 2.5] ```  and use map function to allow calculation of time using each element of the list ```  periodic_times = map(calculate_periodic_time, x) ```.
 
 4- create a list of periodic times using the periodic_times map elements ```  T=[periodic_time for periodic_time in periodic_times] ```
 
@@ -43,7 +43,7 @@ def calculate_periodic_time(l):
 x = [0.5, 1, 1.5, 2, 2.5]
 
 # Use map to apply the lambda function to each length in the list
-periodic_times = map(calculate_periodic_time(l), x)
+periodic_times = map(calculate_periodic_time, x)
 
 # create a list of periodic times using the map values:
 T=[periodic_time for periodic_time in periodic_times]
