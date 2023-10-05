@@ -9,45 +9,87 @@ where l is the length of the string in meters, g is the acceleration due to grav
 ## The Algorithm:
 1- start with defining a function to calculate the periodic time ``` calculate_periodic_timr(l) ```  with agrument l and g where g is constant of 9.81 m/s^2.
 2- use lambda function to calculate the periodic time ``` lambda l: 2* math.pi/ math.sqrt(g / l) ```. 
-3- use a list of length values ``` x = [0.5, 1, 1.5, 2, 2.5] ```  and use map function to allow calculation of time using each element of the list ```  periodic_times = map(calculate_periodic_time, x) ```.
+3- Ask the user to enter the list of lengths separated by comma and use map function to calculate the periodic time for each value in the list
+
+```
+lengths_list = input("Enter a list of length, separated by commas: ")
+
+lengths_list = lengths_list.split(",")
+
+integer_list = []
+for element in lengths_list:
+  integer_list.append(int(element))
+
+print("your list of lengths is: ", "\n", integer_list)
+```
+
+and use map function to allow calculation of time using each element of the list ```  periodic_times = map(calculate_periodic_time(integer_list), integer_list) ```.
 
 4- create a list of periodic times using the periodic_times map elements ```  T=[periodic_time for periodic_time in periodic_times] ```
 
-5- print results as to print the periodic time of the element of index 0 in the list of length and its corresponding value in the time list and repeat the same for each index in the list. 
-**for example:** the periodic time for the element of index zero in x is the element of index zero in T in "seconds" ``` print("periodic time for l= ", x[0] , "m is ", T[0],"seconds") ```
+5- round the elements of the times list to 2 sig figs ``` round_time=[round(element,2) for element in T]``` 
+6- print results ``` print("periodic times corresporing to the lengths are ", round_time)```
+7- make the .py file callable module  ``` __all__=["calculate_periodic_time"] ```
+
+
 
 ## python code:
 
 # This is Python code
 
+
 ```
 
+#algorithm.py
 import math
+
 def calculate_periodic_time(l):
-  """Calculates the angular frequency of a simple pendulum.
+  """Calculates the periodic time of a simple pendulum.
 
   Args:
     l: The length of the pendulum in meters.
 
   Returns:
-    The angular frequency of the pendulum in radians per second.
+    The periodic time of the pendulum in seconds.
   """
-
-  g = 9.81  # Acceleration due to gravity in meters per second squared.
-
-  #use lambda function to calculate the periodic time of the simple pendulum where l is the length of the string.
-  calculate_periodic_time=(lambda l: 2* math.pi/ math.sqrt(g / l))
+# Acceleration due to gravity in meters per second squared.
+  g = 9.81
+# use lambda function calculate the periodic time where l is the length of the string and return the value calculated
+  calculate_periodic_time= (lambda l: 2* math.pi/ math.sqrt(g / l))
   return calculate_periodic_time
+  #-----------------------------------------------------------#
+# Prompt the user for a list input.
 
-# Define a list of lengths of pendulums
-x = [0.5, 1, 1.5, 2, 2.5]
+lengths_list = input("Enter a list of length, separated by commas: ")
+
+# Split the user input string into a list.
+lengths_list = lengths_list.split(",")
+
+# Convert the elements of the list to integers.
+integer_list = []
+for element in lengths_list:
+  integer_list.append(int(element))
+
+# Print the integer list.
+print("your list of lengths is: ", "\n", integer_list)
+
+#--------------------------------------------------------------#
 
 # Use map to apply the lambda function to each length in the list
-periodic_times = map(calculate_periodic_time(x), x)
+periodic_times = map(calculate_periodic_time(integer_list), integer_list)
 
-# create a list of periodic times using the map values:
+# Print the periodic times and round them to 2 sig digits
 T=[periodic_time for periodic_time in periodic_times]
+round_time=[round(element,2) for element in T]
+print("periodic times corresporing t0 the lengths are ", round_time)
 
-# Print the periodic times
-print("\n","periodic time for l= ", x[0] , "m is ", round(T[0],ndigits=2),"seconds", "\n", "periodic time for l= ", x[1] , "m is ", round(T[1],ndigits=2),"seconds","\n", "periodic time for l= ", x[2] , "m is ", round(T[2],ndigits=2), "seconds", "\n", "periodic time for l= ", x[3] , "m is ", round(T[3],ndigits=2),"seconds","\n", "periodic time for l= ", x[4] , "m is ", round(T[4],ndigits=2),"seconds",)
+
+__all__=["calculate_periodic_time"]
+
 ```
+
+#USE The Algorithm.py file as a module. 
+
+** import algorithm **
+
+then the code will ask for the input and run automatically untill it prints the results.
