@@ -17,6 +17,19 @@ L is the length of the string and g is acceleration due to gravity
   # Functions used
 - Lambda Function : Lambda function is used as a substitute for fully fledge name function to use it as a simple operation. They have limitations in comparision to function defined by 'def'. They are mostly used for simple one linear operations and are not preferred for multisteps complex operations
 - Map function: Map function is used to apply a specificed function to each item in an iterable and return a new iterable containing the results.
+
+
+
+
+
+
+
+
+
+
+
+# Implimenting pylint
+[algorithm_updated_pylint](https://colab.research.google.com/drive/1j_jzIS7krITIwnW8cCtz9zw191C5FcOc?usp=sharing)
   
 
   
