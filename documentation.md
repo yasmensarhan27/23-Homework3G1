@@ -18,18 +18,53 @@ L is the length of the string and g is acceleration due to gravity
 - Lambda Function : Lambda function is used as a substitute for fully fledge name function to use it as a simple operation. They have limitations in comparision to function defined by 'def'. They are mostly used for simple one linear operations and are not preferred for multisteps complex operations
 - Map function: Map function is used to apply a specificed function to each item in an iterable and return a new iterable containing the results.
 
-
-
-
-
-
-
-
-
-
+# Code Used
+Using math module that provides mathematical functions and constants for performing various mathematical operations.
+```python
+import math
+```
+Calculate the periodic time of a simple pendulum with length l as arguments and returns the periodic time of pendulum in seconds.  Value of acceleration due to gravity g is given in meters per second squared. Lamba function is used to give one linear operation to calculate periodic time. 
+```python
+def calculate_periodic_time(l):
+    g = 9.81
+    calculate_periodic_time= (lambda l: 2* math.pi/ math.sqrt(g / l))
+    return (lambda l: 2 * math.pi * math.sqrt(l / g))(l)
+```
+Prompt the user to list the inputs.
+```python
+lengths_list = input("Enter a list of lengths separated by commas: ")
+```
+ Split the user input string into a list.
+ ```python
+lengths_list = lengths_list.split(",")
+```
+Convert the elements of the list to integers.
+```python
+integer_list = [int(round(float(element))) for element in lengths_list]
+```
+Print the integer list.
+```python
+print(integer_list)
+```
+ Use map to apply the lambda function to each length in the list.
+ ```python
+periodic_times = map(calculate_periodic_time, integer_list)
+```
+Print the periodic times and round them to 2 decimal places.
+```python
+T = list(periodic_times)
+rounded_times = [round(element, 2) for element in T]
+print("Periodic times corresponding to the lengths are:",rounded_times)
+```
+# output
+<img width="524" alt="Output" src="https://github.com/pratibha77118/23-Homework3G1/assets/72980895/da05c6b6-a803-4801-b84d-996ee8c8fc7d">
 
 # Implimenting pylint
-[algorithm_updated_pylint](https://colab.research.google.com/drive/1j_jzIS7krITIwnW8cCtz9zw191C5FcOc?usp=sharing)
+Pylint is a powerful tool that help to maintain quality and consistency of python codes. It helps to write cleaner, more readable, and less error-prone code by identifying and flagging potential issues and errors adherence to coding standards.
+
+[algorithm_updated_pylint]
+(https://colab.research.google.com/drive/1j_jzIS7krITIwnW8cCtz9zw191C5FcOc?usp=sharing)
+<img width="1107" alt="pylint_output" src="https://github.com/pratibha77118/23-Homework3G1/assets/72980895/fb98fd12-dd99-419b-a82a-70096acff21f">
   
 
   
