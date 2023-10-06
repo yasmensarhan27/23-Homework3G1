@@ -6,8 +6,10 @@ L is the length of the string and g is acceleration due to gravity
 # Objectives
 1 To use a classical mechanics function as a python function and using this function as an argument in another function.
 # Steps to implement
-- Define a classical mechanics function as periodic time with arguments l and g.
-- Use Lambda function is used to calculate the periodic time.
+- Define a classical mechanics function as periodic time with arguments l and g.- 
+- Use Lambda function to calculate the periodic time.
+- Save the file as module
+- Import module defined earlier.
 - List the length values.
 - Use map function to calculate time using each element in the lists.
 - Create a list of periodic times using the map elements.
@@ -43,32 +45,42 @@ __all__=["calculate_periodic_time"]
 ```python
 import algorithm
 lengths_list = input("Enter a list of length, separated by commas: ")
-  # Split the user input string into a list.
+# Split the user input string into a list.
 lengths_list = lengths_list.split(",")
-  # Convert the elements of the list to integers
+# Convert the elements of the list to integers
 integer_list = []
 for element in lengths_list:
   integer_list.append(int(element))
-    # Print the integer list.
+# Print the integer list.
 print("your list of lengths is: ", integer_list)
-    #--------------------------------------------------------------#
-    # Use map to apply the lambda function to each length in the list
+#--------------------------------------------------------------#
+# Use map to apply the lambda function to each length in the list
 periodic_times = map(calculate_periodic_time(integer_list), integer_list)
-    # Print the periodic times and round them to 2 sig digits
+# Print the periodic times and round them to 2 sig digits
 T=[periodic_time for periodic_time in periodic_times]
 round_time=[round(element,2) for element in T]
 print("periodic times corresporing to the lengths are ", round_time)
 
 __all__=["period"]
 ```
+# Output
+<img width="524" alt="Output" src="https://github.com/pratibha77118/23-Homework3G1/assets/72980895/c2cb28a9-ffad-4d8a-82ca-d70922a0fb08">
+
+
 # Implementing Pylint
 Pylint is a powerful tool that help to maintain quality and consistency of python codes. It helps to write cleaner, more readable, and less error-prone code by identifying and flagging potential issues and errors adherence to coding standards.
 
 [algorithm_updated_pylint](https://colab.research.google.com/drive/1j_jzIS7krITIwnW8cCtz9zw191C5FcOc?usp=sharing)
-<img width="524" alt="Output" src="https://github.com/pratibha77118/23-Homework3G1/assets/72980895/da05c6b6-a803-4801-b84d-996ee8c8fc7d">
 
 <img width="1107" alt="pylint_output" src="https://github.com/pratibha77118/23-Homework3G1/assets/72980895/fb98fd12-dd99-419b-a82a-70096acff21f">
-  
+
+# Sources
+- ChatGpt
+- (https://docs.python.org/3/tutorial/modules.html)
+- (https://pypi.org/project/pylint/)
+
+
+
 
   
 
