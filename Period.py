@@ -5,7 +5,7 @@ lengths_list = lengths_list.split(",")
   # Convert the elements of the list to integers
 integer_list = []
 for element in lengths_list:
-  integer_list.append(int(element))
+  integer_list.append(float(element))
     # Print the integer list.
 print("your list of lengths is: ", integer_list)
     #--------------------------------------------------------------#
